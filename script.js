@@ -13,8 +13,18 @@ let currentActive = 1;
 next.addEventListener("click", () => {
   currentActive++;
 
-  //Cohecking to make the currentActive not go past the number of circles
+  //Checking to make the currentActive not go past the number of circles
   if (currentActive > circles.length) {
     currentActive = circles.length;
   }
+});
+
+//PREV BTN
+prev.addEventListener("click", () => {
+    //Check to not let the current active go below 1
+    currentActive--
+    
+    if (currentActive < 1) {
+        currentActive = 1
+    }
 });
