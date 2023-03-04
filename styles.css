@@ -4,3 +4,95 @@
     box-sizing: border-box;
     list-style: none;
 }
+
+/* CONTAINER STYLING */
+.container{
+    width: 70%;
+    margin: 200px auto;
+    text-align: center;
+}
+
+/* PROGRESS CONTAINER */
+.progress-container{
+    display: flex;
+    position: relative;
+    margin-bottom: 50px;
+    max-width: 100%;
+    width: 100%;
+}
+
+/* PROGRESS CONTAINER BEFORE */
+.progress-container::before{
+    content: '';
+    background-color: #e4e4e4;
+    height: .2rem;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: -1; 
+}
+
+/* PROGRESS BG */
+.progress-bg{
+    background-color: rgb(82, 44, 44);
+    height: .2rem;
+    width: 0%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: -1;
+    transition: 0.4s ease 
+}
+
+/* PROGRESS STEPS */
+.progress-container ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* CIRCLES */
+.circles{
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px #e4e4e4 solid;
+    transition: .4s ease;
+}
+
+.circles.active{
+    border-color: rgb(82, 44, 44);
+}
+
+/* BTTS */
+.btn{
+    background-color: rgb(82, 44, 44);
+    border: none;
+    padding: 7px 20px;
+    border-radius: 7px;
+    font-size: 1rem;
+    margin: 0px 10px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.btn:active{
+    transform: scale(0.95);
+}
+
+.btn:disabled{
+    background-color: #e4e4e4;
+    cursor: not-allowed;
+}
+
+.btn:disabled:active{
+    transform: none;
+}
